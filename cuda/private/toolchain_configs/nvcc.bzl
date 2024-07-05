@@ -48,7 +48,7 @@ def _impl(ctx):
         env_sets = [
             env_set(
                 actions = [ACTION_NAMES.cuda_compile],
-                env_entries = [env_entry("PATH", paths.dirname(cc_toolchain.compiler_executable))],
+                env_entries = [env_entry("PATH", "/usr/bin")],
             ),
         ],
     )
@@ -58,7 +58,7 @@ def _impl(ctx):
         env_sets = [
             env_set(
                 actions = [ACTION_NAMES.device_link],
-                env_entries = [env_entry("PATH", paths.dirname(cc_toolchain.compiler_executable))],
+                env_entries = [env_entry("PATH", "/usr/bin")],
             ),
         ],
     )

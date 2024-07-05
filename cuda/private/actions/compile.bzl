@@ -34,7 +34,7 @@ def compile(
     """
     actions = ctx.actions
     host_compiler = cc_toolchain.compiler_executable
-    cuda_compiler = cuda_toolchain.compiler_executable
+    cuda_compiler = "/usr/bin/gcc"
 
     cuda_feature_config = cuda_helper.configure_features(ctx, cuda_toolchain, requested_features = [ACTION_NAMES.cuda_compile])
     artifact_category_name = cuda_helper.get_artifact_category_from_action(ACTION_NAMES.cuda_compile, pic, rdc)
